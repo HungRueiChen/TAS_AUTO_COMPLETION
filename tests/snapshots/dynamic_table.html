@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Dynamic Table Snapshot</title></head>
+<body>
+<h4>病歷資料</h4>
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr>
+        <th class="titlehead"><a onclick="newTblrow(this)">新增</a></th>
+        <th class="titlehead">就醫日期</th>
+        <th class="titlehead">診斷</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Hidden template row -->
+      <tr class="tblstd hidden">
+        <td><a onclick="delTblrow(this)">×</a></td>
+        <td><a onclick="inConetentDate2(this,'date','q1','c1')">請輸入</a><input type="text" style="display:none"></td>
+        <td><a onclick="inContent2(this,'text','q1','c2')">請輸入</a></td>
+      </tr>
+      <!-- Existing data row (visible, has delete button) -->
+      <tr>
+        <td><a onclick="delTblrow(this)">×</a></td>
+        <td>2025/11/01</td>
+        <td>DM type 2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
